@@ -1,3 +1,5 @@
+from pprintpp import pprint as pp
+from functional import seq
 import click, sys, os
 
 def range_n(end):
@@ -15,7 +17,7 @@ def rename_file (file_path, src, dist):
 
 @click.command()
 @click.option('-p', '--path', prompt='File location', help="Music files location")
-@click.option('-s', '--suffix', prompt='File name suffix', help="File name suffix")
+@click.option('-s', '--suffix', prompt='File name suffix', help="File name suffix") # 숫자 제외한 반복되는 문자열
 def main(path, suffix):
   src_file_names = os.listdir(path)
   ranger = [gen_string(x, suffix) for x in range_n(100)]
