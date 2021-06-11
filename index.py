@@ -1,6 +1,6 @@
 from pprintpp import pprint as pp
 from functional import seq
-import click, sys, os
+import click, os
 
 def range_n(end):
   return list(range(1, end + 1))
